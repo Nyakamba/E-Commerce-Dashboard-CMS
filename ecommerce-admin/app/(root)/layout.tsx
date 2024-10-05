@@ -16,5 +16,6 @@ const SetupLayout = async ({ children }: { children: React.ReactNode }) => {
   if (store) redirect(`/${store.id}`);
   return <div>{children}</div>;
 };
+//some comment
 
 export default SetupLayout;
