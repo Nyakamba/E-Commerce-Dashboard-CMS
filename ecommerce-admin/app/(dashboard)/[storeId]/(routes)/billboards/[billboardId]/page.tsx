@@ -22,7 +22,7 @@ const BillboardPage = async ({
     }
   }
 
-  return <div>Existing billborad: {billboard?.label}</div>;
+  return <div>Existing billborad:e {billboard?.label}</div>;
 };
 
 export default BillboardPage;
