@@ -53,7 +53,11 @@ const ImageUpload = ({
           </div>
         ))}
       </div>
-      <CldUploadWidget onSuccess={onUpload} uploadPreset="hx0hh9ai">
+      <CldUploadWidget
+        options={{ multiple: true }}
+        onSuccess={onUpload}
+        uploadPreset="hx0hh9ai"
+      >
         {({ open }) => {
           const onClick = () => {
             open();
