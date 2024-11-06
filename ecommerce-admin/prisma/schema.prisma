@@ -80,7 +80,7 @@ model Product {
   name       String
   price      String
   isFeatured Boolean  @default(false)
-  isAchived  Boolean  @default(false)
+  isArchived Boolean  @default(false)
   sizeId     String   @db.ObjectId
   size       Size     @relation(fields: [sizeId], references: [id])
   colorId    String   @db.ObjectId

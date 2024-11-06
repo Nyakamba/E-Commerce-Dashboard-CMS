@@ -41,17 +41,22 @@ export async function POST(
     if (!storeByUserId)
       return new NextResponse("Unauthorized", { status: 403 });
 
-    const billboard = await prismadb.billboard.create({
+    const product = await prismadb.product.create({
       data: {
-        label,
-        imageUrl,
-        storeId: params.storeId,
+        name,
+        price,
+        categoryId,
+        colorId,
+        sizeId,
+        images,
+        isFeatured,
+        isArchived,
       },
     });
 
-    return NextResponse.json(billboard);
+    return NextResponse.json(product);
   } catch (error) {
-    console.log("[BILLBOARDS_POST]", error);
+    console.log("[PRODUCTS_POST]", error);
     return new NextResponse("Internal error", { status: 500 });
   }
 }
@@ -64,14 +69,14 @@ export async function GET(
     if (!params.storeId)
       return new NextResponse("Store id is required", { status: 400 });
 
-    const billboards = await prismadb.billboard.findMany({
+    const products = await prismadb.product.findMany({
       where: {
         storeId: params.storeId,
       },
     });
-    return NextResponse.json(billboards);
+    return NextResponse.json(products);
   } catch (error) {
-    console.log("[BILLBOARDS_GET]", error);
+    console.log("[PRODUCTS_GET]", error);
     return new NextResponse("Internal error", { status: 500 });
   }
 }
