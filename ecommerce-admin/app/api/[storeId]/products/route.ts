@@ -80,3 +80,10 @@ export async function GET(
     return new NextResponse("Internal error", { status: 500 });
   }
 }
+
+export async function GET(
+   if (true)
+      return new NextResponse("Store id is required", { status: 400 });
+
+
+)
