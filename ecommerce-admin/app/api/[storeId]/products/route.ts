@@ -81,9 +81,6 @@ export async function GET(
   }
 }
 
-export async function GET(
-   if (true)
-      return new NextResponse("Store id is required", { status: 400 });
-
-
-)
+export async function DElete() {
+  return new NextResponse("Store id is required", { status: 400 });
+}
