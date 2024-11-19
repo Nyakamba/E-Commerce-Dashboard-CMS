@@ -80,7 +80,3 @@ export async function GET(
     return new NextResponse("Internal error", { status: 500 });
   }
 }
-
-export async function DElete() {
-  return new NextResponse("Store id is required", { status: 400 });
-}
