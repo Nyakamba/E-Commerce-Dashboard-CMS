@@ -51,6 +51,7 @@ export async function POST(
         images,
         isFeatured,
         isArchived,
+        storeId: params.storeId,
       },
     });
 
